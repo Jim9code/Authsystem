@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication System</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <% rows.forEach(row => { %>
+        <div class="header">
+            <header> 
+                <div class="nav-bar">
+                    <div class="appname"><div><h2>Jeth Authentication system</h2></div></div>
+                    <div class="inputO">
+                        <div class="inputin">
+                        </div>
+                    </div>
+
+                    <div class="homePages"><div>
+                        <a href="/">HOME</a>
+                        <a href="/dairy">Diary</a>
+                        <a href="/chats">Live Chat</a>
+                        <a href="/logout">Logout</a>
+                    
+                    </div></div>
+
+                </div>
+            </header>
+        </div>
+        <br><br>
+        
+        <div class="profileOut">
+            
+            <div class="profile">
+
+
+             <center>
+                 <div   class="profileimg">
+                    <div>
+                <img src="<%=row.profile_pic %>" alt="Profile picture!" >
+            </div>
+            <br>
+            <form action="/profile" enctype="multipart/form-data" method="POST">
+              <center><input class="file" type="file" name="profileimg" accept="image/*" ><br><br>
+               <button type="submit">Upload</button>
+           </center>
+            </form>
+            <br>
+                  </div> 
+        </center>
+            
+                <div><br><br>
+                    <span class="proinfo">Name :<%=row.last_name %> <%=row.first_name %> </span><br>
+                    <span class="proinfo">User Name : <%=row.username %></span><br>
+                    <span class="proinfo">Email Address : <%=row.email %></span><br>
+                    <span class="proinfo">Mobile Number : <%=row.phone %></span><br><br><br><br>
+                    
+             
+                    <div>
+                        <textarea  name="" id="" cols="23" rows="5" placeholder="">
+                            <%=row.bio %>
+                        </textarea>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+
+
+    <% }) %>
+</body>
+</html>

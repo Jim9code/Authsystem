@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication System</title>
+    <link rel="stylesheet" href="diary.css">
+</head>
+<body>
+
+     
+    
+        <div class="header">
+            <header> 
+                <div class="nav-bar">
+                    <div class="appname"><div><h2>Jeth Authentication system</h2></div></div>
+                    <div class="inputO">
+                        <div class="inputin">
+                           
+                        </div>
+                    </div>
+
+                    <div class="homePages"><div>
+                        <a href="/">HOME</a>
+                        <a href="/chats">Live Chat</a>
+                        <a href="/profile">Profile</a>
+                    </div></div>
+
+                </div>
+            </header>
+        </div>
+        <br><br>
+
+        <div class="profileOut">
+
+            <div class="profile">
+                <% rows.forEach(row => { %>
+                <span>Create Dairy... <%=row.first_name %></span> <a href="/createjotter">Create</a><br><br>
+                
+                    <div>
+                        <form action="/dairy" method="POST">
+                            <button style="float: right; color: black; margin-bottom: 10px;"  class="save" type="submit">Save</button>
+                            <br><br>
+                            <% dairow.forEach(dairy => { %>
+                                <textarea  name="jotter" id="" cols="21" rows="19"><%=dairy.jotter %></textarea>
+                            <% }) %>
+
+                        <br><br>
+                        <!-- <button style="background: whitesmoke; color: black;" type="submit">Save</button> -->
+                    </form>
+                    </div>
+                    
+                </ul>
+            </div>
+            <% }) %>
+        </div>
+
+
+        
+</body>
+</html>

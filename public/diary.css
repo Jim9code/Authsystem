@@ -1,0 +1,141 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    background: rgba(245, 245, 245, 0.368);
+    border: 1px solid black;
+    border-radius: 6px;
+    padding: 10px;
+    
+}
+
+button{
+    color: white;
+    background: blue;
+    padding: 5px;
+    width: 120px;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.header{
+    position: sticky;
+    top: 0px
+}
+
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    background: yellow;
+}
+
+.inputin{
+
+    padding: 20px;
+    padding-right: 150px;
+    
+}
+
+input{
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 20px;
+    width: 380px;
+    font-weight: bolder;
+}
+.inputin button{
+    padding: 8px;
+    border-radius: 8px;
+    font-weight: bolder;
+    font-size: 19px;
+}
+
+.appname{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+}
+
+.Bout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+.homePages{
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+
+}
+
+.profileOut{
+    display: flex;
+    justify-content: center;
+}
+
+.profile{
+    
+    padding: 30px;
+}
+
+textarea{
+    font-size: 20px;
+    padding: 10px;
+    font-weight: bolder;
+    border: none;
+    border-radius: 1%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+    padding: 30px;
+    
+}textarea:focus{
+    border: none;
+}
+
+img{
+    max-width: 100px;
+    border-radius: 15px;
+}
+
+
+
+@media only screen and (max-width:900px) {
+     
+
+
+    .appname{
+        font-size: 4px;
+    }
+
+
+    a{
+        font-size: 6px;
+        padding: 5px;
+        font-weight: bolder;
+    }
+
+    .do{
+        font-size: 10px;
+    }
+
+    .save{
+        font-size: 10px;
+        background: lightgreen;
+    }
+
+    .appname{
+        margin-left: 5px;
+        
+    }
+
+}

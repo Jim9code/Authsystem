@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication system</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    
+        <div class="header">
+            <header> 
+                <div class="nav-bar">
+                    <div class="appname"><div><h2>Jeth Authentication system</h2></div></div>
+                    <div class="inputO">
+                        <div class="inputin">
+                        </div>
+                    </div>
+
+                    <div class="homePages">
+                        <div>
+                        <a href="/">HOME</a>
+                        <a href="/dairy">Diary</a>
+                        <a href="/chats">Live Chat</a>
+
+                        <% users.forEach(user => { %>
+                            <a href="/profile"><%=user.username %></a>
+                        <% }) %>
+                        <a href="/logout">Logout</a>
+                        
+                    </div></div></div></header></div>
+
+                    
+
+
+           <center>
+            <div class="mytodoBook" style="box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1); margin: 10px; padding: 10px;">
+            <div>
+                <form action="/" method="POST">
+                    <center>
+
+                        <input type="text" id="todo" name="todo" placeholder="What is your goal today?"></center><br>
+                    <br>
+                    <button class="todobtn" type="submit">Set Goal <span style="color: black;"> <%=rowCount%>/4</span></button>
+                </form>
+            </div>
+
+            <div class="gols">
+                <ul> <br>
+                    
+
+
+                        <div class="todos">
+                            
+
+                
+                            
+                            <% todo.forEach(todo => { %>
+                                <% const colors = [
+                                'rgba(255, 0, 0, 0.100)',
+                                'rgba(255, 166, 0, 0.100)',
+                                'rgba(0, 128, 0, 0.100)',
+                                'rgba(0, 0, 255, 0.100)',
+                                'white'
+                            ]
+
+                                function random(index){
+                                    const cn = index.length
+                                    let ran = Math.floor(Math.random()*cn)
+                                
+                                    return index[ran]
+                                }
+                                
+                                const Rcolor = random(colors)
+
+                                if(Rcolor === 'blue'){
+                                    const Tcolor = 'white'
+                                }
+                                
+                                %>
+
+                            <div style="background:<%=Rcolor%>;" class="do">
+
+
+                                <div style="width: 100%;">
+                                <input  type="checkbox"  checked name="" id="box"> &nbsp;&nbsp;<br><br>
+                                <li><%=todo.task %></li>
+                            </div>
+                            <a id="tdel" href="/tododel/<%=todo.id %>">&cemptyv;</a>
+                            </div>
+                            
+                            <% }) %>
+                        </div>
+
+                </ul>
+            </div>
+        </div>
+           </center>
+    
+
+<script src="todoAuth.js"></script>
+</body>
+</html>

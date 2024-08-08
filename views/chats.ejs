@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication system</title>
+    <link rel="stylesheet" href="chats.css">
+</head>
+<body>
+    
+        <div class="header">
+            <header> 
+                <div class="nav-bar">
+                    <div class="appname"><div><h2>Jeth Authentication system</h2></div></div>
+                    <div class="inputO">
+                        <div class="inputin">
+                            
+                        </div>
+                    </div>
+
+                    <div class="homePages"><div>
+                        <a href="/">HOME</a>
+                        <a href="/dairy">Diary</a> 
+                        <% users.forEach(user => { %>
+                            <a href="/profile"><%=user.first_name %></a>
+                        <% }) %>
+                    </div>
+                </div>
+
+                </div>
+            </header>
+        </div>
+        
+        <div class="Bout">
+            <div class="homegrid">
+
+    <% rows.forEach(row => { %>
+              <div class="Hgrid">     
+                    <%= row.name %>
+                <br><br>
+                <div class="post">
+                    <%=row.post %>
+                </div>
+              </div>
+
+              <% }) %>
+            </div>
+
+        </div>
+
+        <div class="stikyfoot">
+        <div class="chatpost"> 
+            <div class="chatpostin">
+                <div>
+                    <% users.forEach(user => { %>
+                     <form action="/chats" method="POST">
+                        <input style="display: none;" name="pid" value="<%=user.id %>" type="text"> 
+                      <input style="display: none;" name="pname" value="<%=user.first_name %>" type="text">
+                      <textarea name="textpost" id="chattext" cols="50" rows="1"></textarea>
+                      <button class="chatbtn" type="submit">Shout</button>
+                     </form>
+                    <% }) %>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+</body>
+</html>

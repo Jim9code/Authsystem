@@ -1,0 +1,214 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    background: rgba(245, 245, 245, 0.368);
+    border: 1px solid black;
+    border-radius: 6px;
+    padding: 10px;
+    
+}
+
+.addbtn{
+    color: white;
+    background: blue;
+    float: right;
+    width: 120px;
+}
+
+.header{
+    position: sticky;
+    top: 0px;
+}
+
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    background: yellow;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+    flex-shrink: 1;
+    width: auto;
+    
+}
+
+.inputin{
+
+    padding: 20px;
+
+    
+}
+
+.inputin input{
+    padding: 10px;
+    border-radius: 8px;
+}
+.inputin button{
+    padding: 8px;
+    border-radius: 8px;
+    font-weight: bolder;
+    font-size: 19px;
+}
+
+.appname{
+    display: flex;
+    align-items: center;
+    width: auto;
+    padding: 10px;
+    flex-shrink: 1;
+}
+
+.Bout{
+    display: flex;
+    justify-content: center;
+    height: auto;
+    padding: 10px;
+    padding-bottom: 100px;
+    background: black;
+
+}
+
+.homePages{
+    width: auto;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    
+
+}
+
+.homegrid{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 30px;
+    background: white;
+
+}
+
+.Hgrid{
+    border: 2px solid black;
+    width: 900px;
+    height: 150px;
+    padding: 10px;
+}
+
+.post{
+   width: 100%;
+}
+
+#todo{
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+    width: 50%;
+    
+}
+
+
+
+.todobtn{
+    padding: 8px;
+    font-size: 20px;
+    width: 40%;
+    background: white;
+    color: limegreen;
+    font-weight: bolder;
+    border: 3px dotted limegreen;
+    border-radius: 12px;
+    cursor: pointer;
+}.todobtn:hover{
+    
+    color: limegreen;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 0px;
+
+    
+}
+
+.todos{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    gap: 10px;
+    padding: 20px;
+}
+
+.do{
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+    padding: 20px;
+    border-top-left-radius: 35px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 35px;
+    border-top-right-radius: 0px;
+}
+
+ ul{
+   list-style: none;
+    
+}
+
+#tdel{
+    
+    float: right;
+    background: red;
+    color: white;
+    font-weight: bolder;
+    border: none;
+    
+    
+}
+
+
+
+
+@media only screen and (max-width:900px) {
+     
+    .todos{
+        grid-template-columns: 1fr;
+    }
+
+    .appname{
+        font-size: 4px;
+    }
+
+    .inputin input{
+        font-size: 10px;
+    }
+
+    .inputin button{
+        font-size: 10px;
+    }
+
+    .todobtn{
+        font-size: 10px;
+        width: 50%;
+        font-size: 15px;
+    }
+
+    #todo{
+        font-size: 15px;
+        font-weight: bold;
+        width: 70%;
+    }
+
+    a{
+        font-size: 6px;
+        padding: 5px;
+        font-weight: bolder;
+    }
+
+    .do{
+        font-size: 10px;
+    }
+
+}
